@@ -1,0 +1,1 @@
+# This project stores fles related to scripts using conditional statements and loops in python
