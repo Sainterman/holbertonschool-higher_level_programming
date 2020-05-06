@@ -6,4 +6,4 @@ def no_c(my_string):
             if i in 'cC':
                 newlist.remove(i)
         my_string = "".join(newlist)
-    return  my_string
+    return my_string
