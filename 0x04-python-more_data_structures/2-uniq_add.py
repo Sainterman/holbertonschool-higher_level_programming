@@ -6,5 +6,5 @@ def uniq_add(my_list=[]):
         for item in my_list:
             if item not in residues:
                 uniq += item
-                residues.append(item)    
+                residues.append(item)
     return uniq
