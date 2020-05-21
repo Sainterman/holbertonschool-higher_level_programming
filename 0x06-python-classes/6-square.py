@@ -8,10 +8,12 @@ class Square:
         __size (int): Must be Integer type and >= 0
    """
     __size = 0
+    __position = (0, 0)
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """ Instantiate with setter """
         self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -33,10 +35,31 @@ class Square:
 
     def my_print(self):
         """ print a # square """
-        if self.size != 0:
+        if self.size > 0:
+            if (self.__position[1] > 0):
+                for j in range(self.__position[1]):
+                    print()
             for i in range(self.size):
-                for i in range(self.size):
+                for jeje in range(self.__position[0]):
+                    print(" ", end="")
+                for k in range(self.size):
                     print("#", end="")
                 print()
         else:
             print()
+
+    @property
+    def position(self):
+        """ retrieve position """
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """ Set the position property """
+        if type(value) != tuple or len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(value[0]) != int or type(value[1]) != int:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
