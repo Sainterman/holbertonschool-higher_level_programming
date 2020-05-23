@@ -14,3 +14,15 @@ test with size integer:
     ###
     ###
     ###
+
+test with non integer size:
+    >>> print_square(True)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+test with size less than 0:
+    >>> print_square(-10)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
