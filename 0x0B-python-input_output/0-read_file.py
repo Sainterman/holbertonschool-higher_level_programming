@@ -5,5 +5,5 @@
 def read_file(filename=""):
     """ open, read print and close file """
     with open(filename, encoding='utf-8') as f:
-        text = f.read()
-        print(text)
+        for i in f:
+            print(i, end="")
