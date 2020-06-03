@@ -64,3 +64,9 @@ Test 10: Checks if is printing correctly
     >>> obj.integer_validator("Edad", None)
     Traceback (most recent call last):
     TypeError: Edad must be an integer
+
+test 4:
+    >>> obj.integer_validator("cosa", 0)
+    Traceback (most recent call last):
+        ...
+    ValueError: cosa must be greater than 0
