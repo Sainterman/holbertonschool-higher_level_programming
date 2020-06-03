@@ -1,0 +1,46 @@
+Using BaseGeometry
+First import
+``BaseGeometry`` from the ``BaseGeometry`` module:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+Tests
+    >>> obj = BaseGeometry()
+
+Test 0:
+    >>> obj.area()
+    Traceback (most recent call last):
+        ...
+    Exception: area() is not implemented
+    
+Test 1:
+    >>> obj.integer_validator("cosa", 10)
+
+Test 2:
+    >>> obj.integer_validator("cosa", "gonorrea")
+    Traceback (most recent call last):
+        ...
+    TypeError: cosa must be an integer
+
+test 3:
+    >>> obj.integer_validator("", "gonorrea")
+    Traceback (most recent call last):
+        ...
+    TypeError:  must be an integer
+
+test 4:
+    >>> obj.integer_validator("cosa", -10)
+    Traceback (most recent call last):
+        ...
+    ValueError: cosa must be greater than 0
+
+Test 5: No parameters given
+    >>> obj.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test 6: Checks if is printing correctly
+    >>> obj.integer_validator("Edad", (4,))
+    Traceback (most recent call last):
+    TypeError: Edad must be an integer
