@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" check if inherits from """
+
+
 def inherits_from(obj, a_class):
     """ determine if obj class is instance
     of a class that inherits of a_class
