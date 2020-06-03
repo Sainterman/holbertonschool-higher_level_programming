@@ -9,7 +9,6 @@ class BaseGeometry():
         integer_validator(): validates integer values
         width(int): positive integers
     """
-    
 
     def __init__(self, width, height):
         """ nothing bruh """
