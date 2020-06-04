@@ -2,6 +2,7 @@
 """ Function that returns the dictionary description
  for JSON serialization of an object
 """
+
 import json
 
 
