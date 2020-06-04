@@ -7,6 +7,8 @@ def pascal_triangle(n):
     iterates given amount of sums"""
     if n <= 0:
         return []
+    elif n = 1:
+        return [[1]]
     else:
         triangle = [[1], [1, 1]]
         for i in range(1, n - 1):
