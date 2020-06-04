@@ -3,7 +3,7 @@
 
 
 class Student():
-    """ 
+    """
     Attributes:
         public instance:
             first_name (string)
