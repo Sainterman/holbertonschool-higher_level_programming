@@ -22,4 +22,5 @@ class Student():
         self.age = age
 
     def to_json(self):
+        """ deserialize obj """
         return self.__dict__
