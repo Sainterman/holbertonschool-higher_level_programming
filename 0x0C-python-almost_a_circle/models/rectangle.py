@@ -114,9 +114,8 @@ class Rectangle(Base):
                 setattr(self, attrs[i], args[i])
         else:
             for key, value in kwargs.items():
-               if key in attrs:
-                   setattr(self, key, value)
-
+                if key in attrs:
+                    setattr(self, key, value)
 
     def size_validator(self, name, value):
         """ validate value """
