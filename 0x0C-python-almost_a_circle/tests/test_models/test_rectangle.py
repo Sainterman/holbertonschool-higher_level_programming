@@ -103,11 +103,28 @@ class TestRectangle(unittest.TestCase):
         temp_out.close()
         temp_out2 = StringIO()
         sys.stdout = temp_out2
-        str4x6 = "####\n####\n####\n####\n####\n####\n"
-        rect1 = Rectangle(4, 6)
+        str4x6 = " ###\n ###\n"
+        rect1 = Rectangle(3, 2, 1, 0)
         rect1.display()
         self.assertEqual(temp_out2.getvalue(), str4x6)
         temp_out2.close()
 
+    def test_update_0(self):
+        """Check updating multiple non-keyworded arguments"""
+        r1 = Rectangle(10, 10, 10, 10)
+        self.assertEqual(r1.__str__(), "[Rectangle] (1) 10/10 - 10/10")
+        r1.update(89)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 10/10 - 10/10")
+        r1.update(89, 2)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 10/10 - 2/10")
+        r1.update(89, 2, 3)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 10/10 - 2/3")
+        r1.update(89, 2, 3, 4)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 4/10 - 2/3")
+        r1.update(89, 2, 3, 4, 5)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 4/5 - 2/3")
+
+    def test_update_1(self):
+        """check updating multiple keyworded arguments"""
 if __name__ == "__main__":
     unittest.main()
