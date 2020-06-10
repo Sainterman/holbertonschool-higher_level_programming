@@ -10,6 +10,7 @@ from io import StringIO
 from models.base import Base
 from models.rectangle import Rectangle
 
+
 class TestRectangle(unittest.TestCase):
     """Test pep8 style"""
     def test_pep8_conformance(self):
@@ -35,7 +36,7 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(ValueError, Rectangle, 0, 1)
         self.assertRaises(ValueError, Rectangle, 1, 1, -2, 2)
         self.assertRaises(ValueError, Rectangle, 1, 1, 2, -3)
-       
+
     def test_x_y_input(self):
         """using position with X and Y correct values"""
         rect = Rectangle(1, 1, 2, 2)
@@ -47,8 +48,8 @@ class TestRectangle(unittest.TestCase):
 
     def test_instance_id(self):
         """check multiple instance id"""
-        rect1 = Rectangle(1,1)
-        rect2 = Rectangle(2,1)
+        rect1 = Rectangle(1, 1)
+        rect2 = Rectangle(2, 1)
         rect3 = Rectangle(10, 2, 0, 0, 12)
         self.assertEqual(rect1.id, 1)
         self.assertEqual(rect2.id, 2)
@@ -56,13 +57,13 @@ class TestRectangle(unittest.TestCase):
 
     def test_inheritance(self):
         """Check rectangle inheritance from base class"""
-        rect = Rectangle(1,1)
+        rect = Rectangle(1, 1)
         self.assertIsInstance(rect, Base)
         self.assertIsInstance(rect, Rectangle)
 
     def test_area_value(self):
         """check area of rectangle value"""
-        rect = Rectangle(2,2)
+        rect = Rectangle(2, 2)
         self.assertEqual(rect.area(), 4)
         rect2 = Rectangle(3, 2)
         self.assertEqual(rect2.area(), 6)

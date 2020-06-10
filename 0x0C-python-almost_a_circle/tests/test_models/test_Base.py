@@ -6,6 +6,7 @@ import unittest
 import pep8
 from models.base import Base
 
+
 class TestBase(unittest.TestCase):
     """Test cases for base class including style and id input"""
     def SetUp(self):
@@ -16,7 +17,8 @@ class TestBase(unittest.TestCase):
         """checkl pep8 style"""
         basePep8Style = pep8.StyleGuide(quiet=True)
         result = basePep8Style.check_files(["models/base.py"])
-        self.assertEqual(result.total_errors, 0, "base file has pep8 style errors or warnings")
+        self.assertEqual(result.total_errors, 0,
+                         "base file has pep8 style errors or warnings")
 
     def test_ids(self):
         """Check base instances ids"""
@@ -30,8 +32,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(rect4.id, 4)
 
     def test_multiple_args_to_base(self):
-       """Check if base object defined with multiple arguments"""
-       self.assertRaises(TypeError, Base, 2, "hola")
+        """Check if base object defined with multiple arguments"""
+        self.assertRaises(TypeError, Base, 2, "hola")
 
 
 if __name__ == "__main__":
