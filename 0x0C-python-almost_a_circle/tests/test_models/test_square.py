@@ -22,3 +22,6 @@ class TestSquareClass(unittest.TestCase):
         result = pep8Style.check_files(['models/square.py'])
         self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
+
+if __name__ == "__main__":
+    unittest.main()
