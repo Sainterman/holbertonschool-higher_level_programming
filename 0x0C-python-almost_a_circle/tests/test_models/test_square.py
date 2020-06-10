@@ -22,9 +22,3 @@ class TestSquareClass(unittest.TestCase):
         result = pep8Style.check_files(['models/square.py'])
         self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
-
-    def test_base_inheritance(self):
-        """check square inheritance of base"""
-
-    def test_string_rep_overload(self):
-        """Verify __str__ method format for Squares"""
