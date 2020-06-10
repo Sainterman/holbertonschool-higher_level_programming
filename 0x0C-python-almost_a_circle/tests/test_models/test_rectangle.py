@@ -126,5 +126,10 @@ class TestRectangle(unittest.TestCase):
 
     def test_update_1(self):
         """check updating multiple keyworded arguments"""
+        r1 = Rectangle(10, 10, 10, 10)
+        self.assertEqual(r1.__str__(), "[Rectangle] (1) 10/10 - 10/10")
+        r1.update(height=1)
+        self.assertEqual(r1.__str__(), "[Rectangle] (1) 10/10 - 10/1")
+
 if __name__ == "__main__":
     unittest.main()
