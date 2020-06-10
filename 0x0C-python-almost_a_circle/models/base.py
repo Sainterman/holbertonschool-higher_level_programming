@@ -23,6 +23,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        if  list_dictionaries is None or list_dictionaries is []:
+        """json string rep of for instances of dicts"""
+        if list_dictionaries is None or list_dictionaries is []:
             return "[]"
         return json.dumps(list_dictionaries)
