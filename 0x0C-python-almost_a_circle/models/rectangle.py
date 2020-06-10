@@ -117,6 +117,10 @@ class Rectangle(Base):
                 if key in attrs:
                     setattr(self, key, value)
 
+    def to_dictionary(self):
+        """Returns the dictionary representation of a rectangle"""
+        return self.__dict__
+
     def size_validator(self, name, value):
         """ validate value """
         if type(value) is not int:
