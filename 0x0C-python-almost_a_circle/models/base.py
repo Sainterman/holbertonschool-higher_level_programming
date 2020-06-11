@@ -2,7 +2,7 @@
 """class Base declaration"""
 
 import json
-
+from os import path
 
 class Base:
     """This class will be the base of all other classes in project"""
@@ -49,9 +49,22 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """g'old comment here"""
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         else:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """y know what i mean"""
+        if not path.isfile(cls.__name__ + ".json"):
+            return []
+        with open(cls.__name__ + ".json", encoding='utf-8', mode='r') as file:
+            djson = file.read()
+            ljson = []
+            for el in cls.from_json_string(djson):
+                ljson.append(cls.create(**el))
+            return ljson
