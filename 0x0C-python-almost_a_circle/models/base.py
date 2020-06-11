@@ -4,6 +4,7 @@
 import json
 from os import path
 
+
 class Base:
     """This class will be the base of all other classes in project"""
 
