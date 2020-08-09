@@ -15,3 +15,6 @@ for row in query_rows:
     print(row)
 cursor.close()
 db.close()
+
+if __name__== "__main__":
+    pass
