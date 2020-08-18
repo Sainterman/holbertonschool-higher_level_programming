@@ -1,3 +1,3 @@
 #!/bin/bash
-#get header and follow redirect
+#Do it with curl
 curl -sL "$1"
