@@ -7,4 +7,5 @@ def find_peak(list_of_integers):
     length = len(list_of_integers)
     if length == 0:
         return None
-    return list_of_integers.sort()[-1]
+    list_of_integers.sort()
+    return list_of_integers[-1]
