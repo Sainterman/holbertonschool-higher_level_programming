@@ -3,7 +3,7 @@
 
 import sys
 import urllib.request as request
-
+import urllib.error
 
 if __name__ == '__main__':
     url = sys.argv[1]
