@@ -3,6 +3,7 @@
 import sys
 import requests
 
+
 if __name__ == "__main__":
     url = sys.argv[1]
     req = requests.get(url)
@@ -10,3 +11,4 @@ if __name__ == "__main__":
         print("Error code: {}".format(req.status_code))
     else:
         print(req.text)
+        
