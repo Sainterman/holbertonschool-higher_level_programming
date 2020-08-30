@@ -1,5 +1,5 @@
 #!/urs/bin/python3
-"""error codes wit requests module"""
+"""error codes with requests module"""
 import sys
 import requests
 
