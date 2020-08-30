@@ -1,4 +1,4 @@
-#!/urs/bin/python3
+#!/usr/bin/python3
 """error codes with requests module"""
 import sys
 import requests
