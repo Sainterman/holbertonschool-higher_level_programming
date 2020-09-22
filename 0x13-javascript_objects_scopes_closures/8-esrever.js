@@ -1,5 +1,6 @@
 #!/usr/bin/node
 
 exports.esrever = function (list) {
-  return list.reverse();
-}
+  const b = list.reduceRight((a, c) => (a.push(c), a), []);
+  return b;
+};
