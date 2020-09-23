@@ -2,7 +2,7 @@
 
 const req = require('request');
 
-req.get('https://swapi-api.hbtn.io/api/films', function (err, resp, body) {
+req.get(process.argv[2], function (err, resp, body) {
   if (resp.statusCode === 200) {
     let count = 0;
     const films = JSON.parse(body).results;
